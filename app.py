@@ -28,7 +28,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-#main_loop()
+main_loop()
 
 trades = pd.read_csv('.data/trades.csv')
 status = pd.read_csv('.data/status.csv')
