@@ -28,7 +28,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-main_loop()
+#main_loop()
 
 trades = pd.read_csv('.data/trades.csv')
 status = pd.read_csv('.data/status.csv')
@@ -36,25 +36,22 @@ status = pd.read_csv('.data/status.csv')
 ######### SIDEBAR SECTION
 with st.sidebar:
     st.markdown("# **:orange[BTC Trading Bot Demo]**")
-    st.markdown("*This is a demonstration of a crypto algorithic trading bot. For demo purposes, some features are disabled. Please read the notes below.*")
-    with st.expander("Notes", expanded=False):
+    with st.expander("Notes", expanded=True):
         st.write('''
-                 :orange[***IMPORTANT***]
+                 *This is not a fully functional trading bot but rather a simulated version showing the capabilities of an actual trading bot.*
 
-                *This app executes paper trades based on real BTC price action. It is mimicking real trades. The win rate is accurate and the strategy could be profitable.*
-                 
-                *It's a basic strategy created for demostration purposes. It doesn't take into consideration slippage and trading fees.*
+                 *The bot simulates real trades by executing paper trades based on BTC price action. :orange[The win rate and profits are accurate.]*
 
-                *If you have any enquires such as hiring or working with me, contact me below.*                
-                 ''')
-        st.write('''
-                 :orange[***LINKS***]
-            > *Full Documentation: [Github](https://github.com/mt-hill)* 
-              *Contact: [mattyhill@outlook.com](mailto:mattyhill@outlook.com)*''')
+                 *For more info, please read the full documentation or contact me for any enquiries.*''')
     
+        st.write('''
+                > *Full Docs: [https://github.com/mt-hill/algo_trading_bot_demo](https://github.com/mt-hill/algo_trading_bot_demo/)*
+                        
+                > *Email: [mthill.developer@gmail.com](mailto:mthill.developer@gmail.com)*
+                 ''')
     st.divider()
     
-    with st.expander("Bot Status", expanded=True):
+    with st.expander("Bot Status", expanded=False):
         st.write(f''' 
             Connected to Exchange: **:green[True]**
                     
