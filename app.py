@@ -47,7 +47,7 @@ with st.sidebar:
         st.write('''
                 > *Full Docs: [https://github.com/mt-hill/algo_trading_bot_demo](https://github.com/mt-hill/algo_trading_bot_demo/)*
                         
-                > *Email: [mthill.developer@gmail.com](mailto:mthill.developer@gmail.com)*
+                > *Email: [mth.developer@outlook.com](mailto:mth.developer@outlook.com)*
                  ''')
     st.divider()
     
