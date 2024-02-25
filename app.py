@@ -57,7 +57,7 @@ with st.sidebar:
                     
             Actively Trading: **:green[{status['botactive'].iloc[-1]}]**
         ''')
-        st.button("Stop Bot", use_container_width=True)
+        st.button("Stop Bot", use_container_width=True, disabled=True)
     
     with st.expander("Bot Settings", expanded=False):
         with st.form("Settings", border=False):
@@ -68,13 +68,13 @@ with st.sidebar:
             with me[1]:
                 st.text_input("Stop Loss (%)", 0.00)
             st.slider("Risk per trade (%)", 0, 100, status['risk'].iloc[-1])
-            update_settings = st.form_submit_button(label='Update Settings', use_container_width=True)
+            update_settings = st.form_submit_button(label='Update Settings', use_container_width=True, disabled=True)
 
     with st.expander("API Credentials", expanded=False):
         with st.form("API Keys", border=False):
             st.text_input("Enter API Key", status['apikey'].iloc[-1],type="password")
             st.text_input("Enter API Secret", status['apisecret'].iloc[-1],type='password')
-            update_api_keys = st.form_submit_button(label='Update API Credentials', use_container_width=True)
+            update_api_keys = st.form_submit_button(label='Update API Credentials', use_container_width=True, disabled=True)
         
 
 
@@ -100,7 +100,7 @@ with col[2]:
     if current == False:
         st.error("Not in a position, conditions not met")
     else:
-        st.button("Close Position", use_container_width=True)
+        st.button("Close Position", use_container_width=True, disabled=True)
         st.metric(label="Current Price", value=current_price(), delta="")
         st.metric(label="Buy Price", value=current[0], delta="")
         st.metric(label="Take Profit", value=current[1], delta="")
