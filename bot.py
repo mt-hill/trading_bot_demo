@@ -33,13 +33,13 @@ def trading_loop(df, capital, position):
                 buy_price = row.Close
                 date = index
                 side = "Buy"
-                coins = capital / buy_price
                 pnl = 0
                 pct = 0
                 add_trades(date, side, buy_price, capital, pnl, pct)
                 position = True
         if position:
             retrieved_buy_price = get_buy_price()
+            coins = capital / retrieved_buy_price
             if row.Close >= retrieved_buy_price * 1.0084:
                 sell_price = row.Close
                 date = index
