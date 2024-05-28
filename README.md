@@ -1,5 +1,4 @@
-### https://trading-bot-demo.onrender.com/
-*Hosted on a free service, may take a while to load.*
+
 # BTC Algorithmic Trading Bot App (DEMO)
 
 
@@ -21,3 +20,5 @@
 ## **Screenshot**
 ![btcbot](https://github.com/mt-hill/trading_bot_demo/assets/138307546/8d637302-3505-47d7-8144-2595674ef8af)
 
+### https://trading-bot-demo.onrender.com/
+*Hosted on a free service, may take a while to load.*
