@@ -1,5 +1,5 @@
 ### https://trading-bot-demo.onrender.com/
-Hosted on a free service, may take a while to load.
+*Hosted on a free service, may take a while to load.*
 # BTC Algorithmic Trading Bot App (DEMO)
 
 
