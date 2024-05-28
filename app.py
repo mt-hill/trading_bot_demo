@@ -84,9 +84,11 @@ def equity_curve_chart():
 def current_price():
     timeframe = pd.to_datetime(datetime.now()) - timedelta(hours=1)
     recent_prices = get_price_data(str(timeframe))
-    latest_price = recent_prices['Close'].iloc[-1]
-    return latest_price
-
+    if not recent_prices.empty:
+        latest_price = recent_prices['Close'].iloc[-1]
+        return latest_price
+    else:
+        return None 
 
 ######### SIDEBAR SECTION
 with st.sidebar:
@@ -95,7 +97,7 @@ with st.sidebar:
         st.write('''
                  *This is not a fully functional trading bot but rather a simulated version showing the capabilities of an actual trading bot.*
 
-                 *The bot simulates real trades by executing paper trades based on BTC price action. :orange[The win rate and profits are accurate.]*
+                 *The bot simulates real trades by executing paper trades based on BTC price action.*
 
                  *For more info, please read the full documentation or contact me for any enquiries.*''')
     

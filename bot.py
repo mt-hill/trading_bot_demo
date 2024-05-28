@@ -64,11 +64,11 @@ def trading_loop(df, capital, position):
 
 ### GETS PRICE DATA FROM BINANCE API
 def get_price_data(start):
-    frame = pd.DataFrame(client.get_historical_klines('BTCUSDT',
+    klines = pd.DataFrame(client.get_historical_klines('BTCUSDT',
                                                      '1m',
                                                      start))
+    frame = pd.DataFrame(klines, columns=['Time', 'Open', 'High', 'Low', 'Close', 'Volume'])
     frame = frame.iloc[:,0:6]
-    frame.columns = ['Time', 'Open', 'High', 'Low', 'Close', 'Volume']
     frame.set_index('Time', inplace=True)
     frame.index = pd.to_datetime(frame.index, unit = 'ms')
     frame = frame.astype(float)
@@ -86,6 +86,7 @@ def get_buy_price():
     trades = pd.read_csv(".data/trades.csv")
     buy_price = trades['Price'].iloc[-1]
     return buy_price
+
 ### GETS AND RETURNS STATUS
 def get_status():
     status = pd.read_csv(".data/status.csv")
