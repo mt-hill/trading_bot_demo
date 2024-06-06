@@ -15,7 +15,7 @@
 
 ## **Trading Strategy IMPORTANT**
 
-*The demo app is replicating real trades based on real BTC price action. It's using a strategy which is for demo purposes only. For the sake of the demostration, it doesn't take into consideration trading fees and slippage which means it isn't profitable.*
+*The demo app is executing simulations of real trades based on real BTC price action. It's using a strategy which is for demo purposes only. For the sake of the demostration, it doesn't take into consideration trading fees and slippage which means it isn't profitable.*
 
 ## **Screenshot**
 ![btcbot](https://github.com/mt-hill/trading_bot_demo/assets/138307546/8d637302-3505-47d7-8144-2595674ef8af)
