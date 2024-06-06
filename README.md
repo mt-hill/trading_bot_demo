@@ -2,7 +2,7 @@
 # BTC Algorithmic Trading Bot App (DEMO)
 
 
-#### *This repository serves as a demonstration of the capabilities of an algorithmic trading bot I built. Please note that this is not a fully functional trading bot application but rather a simulated version showing the capabilities of an actual trading bot.*
+#### *This repository serves as a demonstration of an algorithmic trading bot I built. Please note that this is not a fully functional trading bot application but rather a simulated version showing the capabilities of an actual trading bot.*
 
 
 ## Quick Notes
